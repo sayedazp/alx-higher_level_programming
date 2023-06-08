@@ -5,4 +5,4 @@ if __name__ == "__main__":
     len = len(argv) - 1
     for i in range(len):
         add += int(argv[i + 1])
-    print(add)
+    print("{}".format(add))
