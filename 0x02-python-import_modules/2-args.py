@@ -7,9 +7,7 @@ if __name__ == "__main__":
         print("0 arguments.")
     elif (len == 1):
         print("1 argument:")
-        for idx, x in enumerate(argv):
-            print("{}: {}".format(idx + 1, x))
     else:
         print("{} arguments:".format(len))
-        for idx, x in enumerate(argv):
-            print("{}: {}".format(idx + 1, x))
+    for i in range(len):
+        print("{}: {}".format(i + 1, argv[i + 1]))
