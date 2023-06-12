@@ -38,9 +38,11 @@ int is_palindrome(listint_t **head)
 	{
 		if (arr[i] != arr[len - (i + 1)] || len == 2 * i)
 		{
+			free(arr);
 			return (0);
 		}
 		i++;
 	}
+	free(arr);
 	return (1);
 }
