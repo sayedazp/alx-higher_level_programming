@@ -2,6 +2,29 @@
 #include <stdlib.h>
 #include "lists.h"
 
+
+/**
+ * flip - Reverses a singly-linked list
+ * @head: A pointer to the starting node of the list to reverse.
+ * Return: A pointer to the head of the reversed list.
+ */
+listint_t *flip(listint_t **head)
+{
+	listint_t *node = *head, *next, *prev = NULL;
+
+	while (node)
+	{
+		next = node->next;
+		node->next = prev;
+		prev = node;
+		node = next;
+	}
+
+	*head = prev;
+	return (*head);
+}
+
+
 /**
  * is_palindrome - checks if a list is a palindrome
  * @head: pointer to list to be checked
@@ -10,9 +33,8 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *forw;
+	listint_t *flip, *forw, *half;
 	int len = 0;
-	int *arr;
 	int i = 0;
 
 	if (head == NULL || (*head) == NULL || (*head)->next == NULL)
@@ -23,27 +45,25 @@ int is_palindrome(listint_t **head)
 		forw = forw->next;
 		len++;
 	}
-	arr = malloc(sizeof(int) * len);
 	forw = *head;
-	while (forw != NULL)
-	{
-		arr[i] = forw->n;
+	for (i = 0; i < (len / 2) - 1; i++)
 		forw = forw->next;
-		i++;
-	}
-	if (len % 2 == 0 && arr[len / 2] != arr[(len / 2) - 1])
+
+	if ((len % 2) == 0 && forw->n != forw->next->n)
 		return (0);
+
+	half = forw->next->next;
+	half = reverse_listint(&half);
+	flip = half;
 	forw = *head;
-	i = 0;
-	while (len - (i + 1) >= i)
+
+	while (flip)
 	{
-		if (arr[i] != arr[len - (i + 1)] || len == 2 * i)
-		{
-			free(arr);
+		if (forw->n != flip->n)
 			return (0);
-		}
-		i++;
+		forw = forw->next;
+		flip = flip->next;
 	}
-	free(arr);
+
 	return (1);
 }
