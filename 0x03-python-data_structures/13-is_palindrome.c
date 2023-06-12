@@ -11,7 +11,6 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *forw;
-	listint_t *backw;
 	int len = 0;
 	int *arr;
 	int i = 0;
