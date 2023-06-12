@@ -8,7 +8,7 @@
  * @head: A pointer to the starting node of the list to reverse.
  * Return: A pointer to the head of the reversed list.
  */
-listint_t *flip(listint_t **head)
+listint_t *flipy(listint_t **head)
 {
 	listint_t *node = *head, *next, *prev = NULL;
 
@@ -23,7 +23,6 @@ listint_t *flip(listint_t **head)
 	*head = prev;
 	return (*head);
 }
-
 
 /**
  * is_palindrome - checks if a list is a palindrome
@@ -53,7 +52,7 @@ int is_palindrome(listint_t **head)
 		return (0);
 
 	half = forw->next->next;
-	half = reverse_listint(&half);
+	half = flipy(&half);
 	flip = half;
 	forw = *head;
 
