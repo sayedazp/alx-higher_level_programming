@@ -8,6 +8,7 @@
 
 void print_python_list_info(PyObject *p)
 {
+	int i;
 	Py_ssize_t size;
 	Py_ssize_t alloc;
 	PyObject *obj;
