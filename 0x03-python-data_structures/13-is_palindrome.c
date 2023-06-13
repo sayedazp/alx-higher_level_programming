@@ -4,7 +4,7 @@
 
 
 /**
- * flip - Reverses a singly-linked list
+ * flipy - Reverses a singly-linked list
  * @head: A pointer to the starting node of the list to reverse.
  * Return: A pointer to the head of the reversed list.
  */
