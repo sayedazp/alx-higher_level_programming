@@ -7,7 +7,6 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "-I/usr/include/python3.11",
                 "*.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
