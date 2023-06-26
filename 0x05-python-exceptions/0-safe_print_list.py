@@ -3,7 +3,7 @@ def safe_print_list(listy, x):
     z = 0
     try:
         for y in range(x):
-            print("{}".format(listy[y]), end="")
+            print("{:d}".format(listy[y]), end="")
             z += 1
         print("")
     except:
