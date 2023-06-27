@@ -5,8 +5,8 @@ def list_division(my_list_1, my_list_2, list_length):
         try:
             div = my_list_1[y]/my_list_2[y]
         except IndexError:
+            div = 0
             print("{}".format("out of range"))
-            break
         except (ValueError, TypeError):
             div = 0
             print("{}".format("wrong type"))
