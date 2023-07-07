@@ -4,8 +4,11 @@
 
 
 class Rectangle:
+    """Represent a rectangle.
+        Attributes:
+            number_of_instances (int): num of recs
+    """
     number_of_instances = 0
-    """Represent a rectangle."""
     def __init__(self, width=0, height=0):
         """initialize a new rectangle
             Args:
