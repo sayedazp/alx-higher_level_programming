@@ -65,3 +65,7 @@ class Rectangle:
     def __repr__(self):
         """formal obj repr"""
         return ("Rectangle({}, {})".format(self.width, self.height))
+
+    def __del__(self):
+        """destructor"""
+        print("Bye rectangle...")
