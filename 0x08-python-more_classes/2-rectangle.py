@@ -48,4 +48,4 @@ class Rectangle:
 
     def area(self):
         """calc area"""
-        return (self.width*self.height)
+        return (self.width * self.height)
