@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Defines a rectangle class."""
-from models.base import Base
-
+from base import Base
 
 class Rectangle(Base):
     """Represent a rectangle."""
@@ -20,7 +19,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        super.__init__(id)
+        super().__init__(id)
 
     @property
     def width(self):
