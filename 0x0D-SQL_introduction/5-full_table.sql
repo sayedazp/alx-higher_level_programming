@@ -1,2 +1,2 @@
 -- full table descrip
-SHOW FULL COLUMNS FROM hbtn_0c_0;
+SHOW FULL COLUMNS FROM first_table;
