@@ -1,8 +1,10 @@
--- count and join
-SELECT tv_genres.name, count(tv_shows.id) AS number_of_shows
-from tv_show_genres INNNER JOIN tv_shows
-on tv_show_genres.show_id = tv_shows.id
-INNER JOIN tv_genres
-on tv_genres.id = tv_show_genres.genre_id
-GROUP BY (tv_genres.id)
-ORDER BY tv_shows.title, tv_show_genres.genre_id;
+-- lists all genres contained in hbtn_0d_ and the number of shows linked to each
+   -- Each record should display:
+      -- <TV Show genre> - <Number of shows linked to this genre>
+   -- Results must be sorted in descending order by the number of shows linkeda
+   -- The database name will be passed as an argument of the mysql command
+
+SELECT name AS genre, COUNT(*) AS number_of_shows FROM tv_genres
+JOIN tv_show_genres ON id=tv_show_genres.genre_id
+GROUP BY tv_show_genres.genre_id
+ORDER BY number_of_shows DESC;
