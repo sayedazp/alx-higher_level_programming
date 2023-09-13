@@ -1,4 +1,4 @@
-#!/bin/node
+#!/usr/bin/node
 
 const myNum = parseInt(process.argv[2]);
 
