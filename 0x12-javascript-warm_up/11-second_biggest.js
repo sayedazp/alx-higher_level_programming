@@ -20,5 +20,5 @@ for (let i = 1; i < arry.length - 1; i++) {
     arry[i] = tmp;
   }
 }
-
-console.log(arry[arry.length - 2]);
+ret = arry[arry.length - 2]
+console.log(isNaN(ret) ? 0 : ret);
