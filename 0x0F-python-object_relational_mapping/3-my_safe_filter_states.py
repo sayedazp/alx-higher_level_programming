@@ -8,10 +8,9 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute("SELECT * \
                  FROM `states` \
-                WHERE BINARY `name` = %(name)s", {'name': sys.argv[4]})
+                WHERE BINARY `name` = %(name)s ORDER BY id", {'name': sys.argv[4]})
     list = cur.fetchall()
     for row in list:
         print(row)
-    print(cur._executed)
     cur.close()
     db.close()
