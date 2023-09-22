@@ -1,2 +1,2 @@
-#!/bin/bash
+./6-model_state.py root root hbtn_0e_6_usa#!/bin/bash
 python3 -c $PYCODE
