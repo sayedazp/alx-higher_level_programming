@@ -15,7 +15,7 @@ if __name__ == "__main__":
     session = Session()
 
     f_state = session.query(State).order_by
-    (State.id).filter(State.id == 8).first()
+    (State.id).first()
 
     if f_state is None:
         print("Nothing")
