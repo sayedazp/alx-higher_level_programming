@@ -14,8 +14,7 @@ if __name__ == "__main__":
 
     session = Session()
 
-    f_state = session.query(State).order_by
-    (State.id).first()
+    f_state = session.query(State).order_by(State.id).first()
 
     if f_state is None:
         print("Nothing")
