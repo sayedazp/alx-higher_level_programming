@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""model state phase 1"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-"""model state phase 1"""
 
 Base = declarative_base()
 
